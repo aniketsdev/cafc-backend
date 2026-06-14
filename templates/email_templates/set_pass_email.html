@@ -1,0 +1,58 @@
+{% extends "email_templates/base_email.html" %}
+
+{% block title %}Set Your Password{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 20px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 500; color: #11466D;">
+    Hello, {{ first_name }}
+</h2>
+
+<p style="margin: 0 0 24px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Your account has been successfully created. To complete your registration, please set your password by clicking the button below.
+</p>
+
+<!-- CTA Button -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin: 0 0 24px;">
+    <tr>
+        <td align="center">
+            <!--[if mso]>
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ set_password_link }}" style="height:44px;v-text-anchor:middle;width:200px;" arcsize="14%" stroke="f" fillcolor="#11466D">
+            <w:anchorlock/>
+            <center>
+            <![endif]-->
+            <a href="{{ set_password_link }}" style="display: inline-block; padding: 12px 32px; background-color: #11466D; color: #FFFFFF; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 6px; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);">
+                Set Your Password
+            </a>
+            <!--[if mso]>
+            </center>
+            </v:roundrect>
+            <![endif]-->
+        </td>
+    </tr>
+</table>
+
+<!-- Info Box -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin: 0 0 20px;">
+    <tr>
+        <td style="background-color: #F9FAF9; border: 1px solid #E7E9EB; border-radius: 6px; padding: 12px 16px;">
+            <p style="margin: 0 0 4px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 500; color: #70777D; text-transform: uppercase; letter-spacing: 0.05em;">
+                Direct Link
+            </p>
+            <p style="margin: 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.5; color: #1A75AD; word-break: break-all;">
+                {{ set_password_link }}
+            </p>
+        </td>
+    </tr>
+</table>
+
+<!-- Warning -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="background-color: #FEF6EE; border-left: 3px solid #E06615; border-radius: 0 6px 6px 0; padding: 12px 16px;">
+            <p style="margin: 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.5; color: #7C4407; font-weight: 500;">
+                This link will expire in 30 minutes and can only be used once. If you did not request this, please ignore this email.
+            </p>
+        </td>
+    </tr>
+</table>
+{% endblock %}

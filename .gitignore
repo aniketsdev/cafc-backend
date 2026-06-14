@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual env
+venv/
+
+# Django
+.env
+staticfiles/
+# media/
+
+# Logs
+storage/logs/*.log
+storage/logs/*.log.*
+# But keep .gitkeep file
+!storage/logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

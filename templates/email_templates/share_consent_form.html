@@ -1,0 +1,87 @@
+{% extends "email_templates/base_email.html" %}
+
+{% block title %}Consent Form Shared{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; color: #11466D;">
+    Consent Form Shared With You
+</h2>
+
+<p style="margin: 0 0 16px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Hello {{ recipient_name }},
+</p>
+
+<p style="margin: 0 0 24px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    A consent form has been shared with you. Please review the details below:
+</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin: 0 0 24px; background-color: #F2F7FA; border-radius: 6px;">
+    <tr>
+        <td style="padding: 20px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Form Name
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ form_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Resident
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ resident_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Shared By
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ shared_by }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+{% if is_custom %}
+<p style="margin: 0 0 20px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Please find the attached PDF document for your review.
+</p>
+{% else %}
+<p style="margin: 0 0 20px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Please log in to the portal to review and complete the form.
+</p>
+
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 0 24px;">
+    <tr>
+        <td style="background-color: #11466D; border-radius: 6px; text-align: center;">
+            <a href="{{ login_url }}" target="_blank" style="display: inline-block; padding: 12px 32px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #FFFFFF; text-decoration: none;">
+                Log In to Portal
+            </a>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0 0 8px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.6; color: #757775;">
+    Or copy and paste this link into your browser:
+</p>
+<p style="margin: 0 0 8px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.6; color: #1A75AD; word-break: break-all;">
+    {{ login_url }}
+</p>
+{% endif %}
+{% endblock %}

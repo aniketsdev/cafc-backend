@@ -1,0 +1,90 @@
+{% extends "email_templates/base_email.html" %}
+
+{% block title %}Incident Report Completed{% endblock %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; color: #11466D;">
+    Incident Report Completed
+</h2>
+
+<p style="margin: 0 0 16px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Dear {{ recipient_name }},
+</p>
+
+<p style="margin: 0 0 24px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    An incident report has been completed and is ready for your review.
+</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin: 0 0 24px; background-color: #F2F7FA; border-radius: 6px;">
+    <tr>
+        <td style="padding: 20px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Resident
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ resident_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Date / Time
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ incident_datetime }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Location
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ location }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Group Home
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ group_home_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding: 8px 0;">
+                        <hr style="border: none; border-top: 1px solid #E7E9EB; margin: 0;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; color: #757775;">
+                        Signed off by
+                    </td>
+                    <td style="padding: 4px 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #2C2D2C; text-align: right;">
+                        {{ pm_name }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<p style="margin: 0 0 20px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+    Please log in to the portal to view and acknowledge this incident.
+</p>
+{% endblock %}

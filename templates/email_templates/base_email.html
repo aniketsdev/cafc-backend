@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Brett Group Home Management{% endblock %}</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F9FAF9;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        img {
+            border: 0;
+            display: block;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            background-color: #F9FAF9;
+            padding: 40px 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+            }
+            .content-cell {
+                padding: 24px 20px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F9FAF9;">
+    <table role="presentation" class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" style="background-color: #F9FAF9; padding: 40px 0;">
+        <tr>
+            <td align="center">
+                <!-- Email Container -->
+                <table role="presentation" class="email-container" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; background-color: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color: #11466D; padding: 28px 32px; text-align: center;">
+                            <h1 style="margin: 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; color: #FFFFFF; letter-spacing: 0.02em;">
+                                Brett Group Home Management
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- Accent Bar -->
+                    <tr>
+                        <td style="background-color: #1A75AD; height: 4px; font-size: 0; line-height: 0;">&nbsp;</td>
+                    </tr>
+
+                    <!-- Body Content -->
+                    <tr>
+                        <td class="content-cell" style="padding: 32px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #2C2D2C;">
+                            {% block content %}{% endblock %}
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="border-top: 1px solid #E7E9EB; padding: 24px 32px; text-align: center;">
+                            <p style="margin: 0 0 8px; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.5; color: #989998;">
+                                This is an automated message from Brett Group Home Management.
+                            </p>
+                            <p style="margin: 0; font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.5; color: #989998;">
+                                Please do not reply directly to this email.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- /Email Container -->
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
