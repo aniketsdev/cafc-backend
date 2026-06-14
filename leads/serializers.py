@@ -10,7 +10,6 @@ from leads.models import LeadGroupHomeAssignment
 
 class LeadSerializer(serializers.ModelSerializer):
     referral_number = serializers.SerializerMethodField()
-
     class Meta:
         model = Lead
         fields = [
