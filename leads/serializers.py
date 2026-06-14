@@ -8,9 +8,6 @@ from django.utils import timezone
 from rest_framework import serializers
 from leads.models import LeadGroupHomeAssignment
 
-
-
-#--------------------LeadSerializer----------------------------------------------
 class LeadSerializer(serializers.ModelSerializer):
     referral_number = serializers.SerializerMethodField()
 
