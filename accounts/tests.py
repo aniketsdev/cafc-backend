@@ -32,7 +32,7 @@ class ScopeQuerysetTests(TestCase):
         )
         self.user = User.objects.create_user(
             email="x@x.com", username="x", first_name="X", last_name="X",
-            password="pw", role=self.dsp_role,
+            password="pwwytyw", role=self.dsp_role,
         )
         # ONLY assigned to home_a
         GroupHomeStaffAssignment.objects.create(
